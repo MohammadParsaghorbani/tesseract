@@ -7,7 +7,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 def open_image():
     file_path = filedialog.askopenfilename()
-    if file_path:#file path
+    if file_path:
         img = Image.open(file_path)
         text = pytesseract.image_to_string(img)
         result_text.delete(1.0, tk.END)
